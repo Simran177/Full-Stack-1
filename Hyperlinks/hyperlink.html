@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="https://www.beta-labs.in">  <!--For providing absolute address to relative address we add this base address-->
+        <title>Hyperlink</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 title="Heading of the Document">HyperLink Basics</h1>
+        <a title="Wikipedia Document" href="https://en.wikipedia.org/wiki/HTML" target="_blank">Introduction to HTML</a>
+       <br><br>
+       <!-- Add Event in anchor element-->
+        <a href="https://www.beta-labs.in/" target="_self" onmouseover="hello()">My Website</a>  
+    
+    <br><br>
+    <!-- Internal Hyperlink-->
+    <a href="hyperlink-2.html" target="_blank">My Application</a>   <!-- remove base address to make this work-->
+    <script>
+        function hello()
+        {
+            alert('Hello how r u..?');
+        }
+    </script>
+
+   <!-- Types of Hyperlinking
+    1. External : Own App -> Other App
+    2. Internal : Own App Page -> Own App Other Page element -->
+    <!--What is Path
+    1. Absolute: Complete Address of refernce document
+    2. Relative: Incomplete address of refernce document -->
+
+    <a href="/p/html.html">My Blog</a>
+</body>
+</html>
