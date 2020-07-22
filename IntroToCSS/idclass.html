@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /* 1.Type Selector */
+        p,h2,h1{
+            color:red;
+        }
+        /* 2.Universal Selector */
+        *{
+            font-size: 20px;
+        }
+        /* 3.Descendent Selector */
+        div p{     
+            background-color: yellow;
+        }
+        /* All Paragraphs inside div tag will have above css apllied */
+
+        /* 4. Child Selector */
+
+        div > p{
+            text-decoration: line-through;
+        }
+        /* 5.ID Selector */
+        #para2{
+            color:blue;
+        }
+        #head1{
+            background-color: black;
+            color:wheat
+        }
+        /* 6. Class Selector */
+.class1{
+    background-color: pink;
+    color:white;
+}
+.class2{
+    background-color: aquamarine;
+    color:yellow;
+}
+        /*7.Attribute Selector  */
+        h1,h2,p[lang='fr']{
+            text-shadow: 2px 2px 4px blue;
+        }
+        p[lang]{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>This is heading-1</h1>
+        <h2 class="class1">This is heading-2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae error, porro, perspiciatis sed illo qui quidem, voluptatum quo dolores tempora aliquam autem provident numquam minus? Nihil corrupti error perferendis facere nostrum ea quam iste officiis inventore ipsa, alias, quisquam eaque molestiae deserunt vitae architecto reprehenderit repellendus! Eaque, quas harum!
+
+        </p>
+    </div>
+    <div>
+        <h1>This is heading-1</h1>
+        <h2 class="class2">This is heading-2</h2>
+        <blockquote> 
+            <!-- Now this para direct child of blockquote ,not direct child of div ,so text-decoration will not be applied -->
+        <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae error, porro, perspiciatis sed illo qui quidem, voluptatum quo dolores tempora aliquam autem provident numquam minus? Nihil corrupti error perferendis facere nostrum ea quam iste officiis inventore ipsa, alias, quisquam eaque molestiae deserunt vitae architecto reprehenderit repellendus! Eaque, quas harum!
+        </blockquote>
+        </p>
+    </div>
+    <div>
+        <h1 id="head1">This is heading-1</h1>
+        <h2 class="class1">This is heading-2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae error, porro, perspiciatis sed illo qui quidem, voluptatum quo dolores tempora aliquam autem provident numquam minus? Nihil corrupti error perferendis facere nostrum ea quam iste officiis inventore ipsa, alias, quisquam eaque molestiae deserunt vitae architecto reprehenderit repellendus! Eaque, quas harum!
+            
+        </p>
+        <h2 class="class2">This is heading-2</h2>
+
+    </div>
+    <p lang>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit itaque molestiae aperiam perferendis cumque nobis quisquam eum omnis vel tempora, consequatur consequuntur corporis. Dolores nobis et dicta ducimus, 
+        asperiores aut.</p>
+        <p lang='fr'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, reiciendis?
+        </p>
+</body>
+</html>
