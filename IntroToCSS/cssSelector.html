@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /* 1.Type Selector */
+        p,h2,h1{
+            color:red;
+        }
+        /* 2.Universal Selector */
+        *{
+            font-size: 20px;
+        }
+        /* 3.Descendent Selector */
+        div p{     
+            background-color: yellow;
+        }
+        /* All Paragraphs inside div tag will have this css apllied */
+
+        /* 4. Child Selector */
+
+        div > p{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>This is heading-1</h1>
+        <h2>This is heading-2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae error, porro, perspiciatis sed illo qui quidem, voluptatum quo dolores tempora aliquam autem provident numquam minus? Nihil corrupti error perferendis facere nostrum ea quam iste officiis inventore ipsa, alias, quisquam eaque molestiae deserunt vitae architecto reprehenderit repellendus! Eaque, quas harum!
+
+        </p>
+    </div>
+    <div>
+        <h1>This is heading-1</h1>
+        <h2>This is heading-2</h2>
+        <blockquote> 
+            <!-- Now this para direct child of blockquote ,not direct child of div ,so text-decoration will not be applied -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae error, porro, perspiciatis sed illo qui quidem, voluptatum quo dolores tempora aliquam autem provident numquam minus? Nihil corrupti error perferendis facere nostrum ea quam iste officiis inventore ipsa, alias, quisquam eaque molestiae deserunt vitae architecto reprehenderit repellendus! Eaque, quas harum!
+        </blockquote>
+        </p>
+    </div>
+    <div>
+        <h1>This is heading-1</h1>
+        <h2>This is heading-2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vitae error, porro, perspiciatis sed illo qui quidem, voluptatum quo dolores tempora aliquam autem provident numquam minus? Nihil corrupti error perferendis facere nostrum ea quam iste officiis inventore ipsa, alias, quisquam eaque molestiae deserunt vitae architecto reprehenderit repellendus! Eaque, quas harum!
+            
+        </p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum adipisci atque odit dolorum sunt nemo corporis accusamus modi vitae? Commodi rem laborum error impedit ratione aperiam sit debitis. In nulla veniam obcaecati libero, possimus praesentium impedit fugit saepe ad amet aspernatur magni veritatis enim nesciunt ea vel odit quaerat sequi.</p>
+</body>
+</html>
