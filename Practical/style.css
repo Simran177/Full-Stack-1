@@ -1,3 +1,6 @@
 body{
     background-color:lightslategrey;
 }
+img[usemap],map area{
+    outline: none;
+}
