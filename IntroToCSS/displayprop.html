@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        #span1{
+            display: inline-block;
+            height: 100px;
+            width:100px;
+            margin: 20px;
+            padding:20px;
+            background-color:pink;
+        }
+        #span2{
+            /* visibility: hidden; */
+            display: none;
+        }
+        a{
+            margin:20px auto;
+            display: block;
+            border:2px solid orange;
+            padding: 10px;
+            width:200px;
+            text-align: center;
+            background-color: orange;
+            text-decoration: none;
+            color:white;
+        }
+        a:hover{
+            background-color: yellowgreen;
+        }
+        p{
+        border:1px solid red;
+       }
+       #para2{
+           display: inline;;
+       }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, ab aliquid obcaecati quasi repudiandae quisquam, libero quaerat sed, rerum architecto eaque. Accusantium facilis atque repellat quia id adipisci repellendus est ducimus magnam quidem officiis et sapiente odit ut facere possimus nostrum suscipit cum, animi aliquid! Tenetur id expedita ipsa nam?</p>
+</p>
+    <p id="para2">Hello World</p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reiciendis pariatur eaque vel animi fugiat ea minus adipisci est dolore!
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minima praesentium cupiditate ipsam eum delectus porro et harum quos suscipit recusandae soluta non aliquid, dicta facere itaque ipsum neque quidem distinctio iste? Quo dicta est cum ipsam assumenda sint similique, deserunt esse ipsa quidem! Quod doloremque similique atque facilis enim.</p>
+<span id="span2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum soluta neque reprehenderit odio possimus debitis eligendi atque, vitae, culpa eaque accusamus repellendus perspiciatis, temporibus ipsa incidunt corrupti excepturi asperiores? Velit minima soluta et distinctio magni ab ea omnis impedit esse, commodi vel veritatis a </span><span id="span1">similique dolorem </span>
+<a href="#" onclick="hello()">This is a link</a>
+<script>
+    function hello(){
+        document.getElementById("span2").style.display='inline';
+    }
+</script>
+</body>   
+</html>
