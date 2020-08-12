@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            width:30%;
+            /* margin: 0px auto; */
+            list-style:none;
+            /* Instead of display:inline-block ,display:flex;
+             flex-direction: row; */
+             padding: 0;
+            overflow: hidden;
+            background-color: aquamarine;
+
+        }
+        ul li a{
+            display: block;  /*to appy padding as anchor tag is inline element */
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            padding: 15px 10px;
+            font-weight: bold;
+        }
+        ul li a:hover{
+            background-color: pink;
+            color: black;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <!-- 1.Vertical Navigation bar -->
+    <!-- Shotcut key: ul>li*5>a  -->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    
+</body>
+</html>
