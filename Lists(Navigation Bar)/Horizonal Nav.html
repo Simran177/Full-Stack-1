@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .content{
+            padding: 20px;
+            text-align: justify;
+            margin-top: 60px;
+        }
+        ul{
+            width:100%;
+            margin: 0px auto;
+            list-style:none;
+            /* Instead of display:inline-block ,display:flex;
+             flex-direction: row; */
+             padding: 0;
+            overflow: hidden;
+            background-color: aquamarine;
+            position: fixed;
+            /* position: bottom;  to place it at bottom */
+            top:0;
+
+        }
+        ul li{
+            display:inline-block;
+            /* OR  float:left; */
+        }
+        ul li a{
+            display: block;  /*to appy padding as anchor tag is inline element */
+            text-decoration: none;
+            color: white;
+            width:100px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            padding: 15px 10px;
+            font-weight: bold;
+        }
+        ul li a:hover{
+            background-color: pink;
+            color: black;
+        }
+        #right-side{
+            float:right;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1.Horizontal Navigation bar -->
+    <!-- Shotcut key: ul>li*5>a  -->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li id="right-side"><a href="#">Contact</a></li>
+    </ul>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, mollitia repellat consequatur animi vel corrupti maiores et fugit vitae eaque accusantium earum nihil ratione delectus fugiat ullam minus ad ea! At, id earum cupiditate aperiam voluptatum 
+            atque sunt magni nulla cumque deserunt explicabo iure fugiat? Saepe amet quisquam vero voluptatum? Debitis deleniti natus maiores, unde vero, voluptatum nobis nemo distinctio corporis voluptate corrupti aut doloremque doloribus consequatur dolorum neque.
+             Obcaecati beatae aliquam accusantium saepe sunt natus voluptas modi iure rerum iste molestiae vitae magni error nihil repellendus amet, pariatur similique quibusdam nulla facilis minus inventore sint maxime sit. Eveniet exercitationem voluptas perferendis 
+             magni culpa fugiat incidunt corporis ex. Nobis quae animi, et quidem laboriosam dolorum sequi praesentium modi ipsa sunt dignissimos veritatis ipsam voluptate consequatur cumque pariatur molestiae repellendus earum ad quaerat maiores, in enim? Eaque modi, 
+             voluptatem nulla dolor, necessitatibus at neque dolorem voluptas amet corporis fuga, maiores praesentium ipsa deleniti rem quis pariatur harum cupiditate qui. Qui perferendis ipsa suscipit, excepturi, temporibus sit recusandae aut iusto in at harum neque, 
+             consequuntur doloribus voluptates aliquid! Non, ipsam blanditiis voluptate quibusdam quas nam quam fuga dolores sunt repudiandae. Omnis quas odio quasi, exercitationem deserunt sint non veritatis dolore in nemo perferendis officia quia accusamus commodi sit voluptatum architecto molestias!
+              Impedit quidem totam nemo esse nulla eveniet modi asperiores. Unde illum nesciunt ab dolores architecto, officiis odio amet iste laboriosam aliquam quisquam eveniet delectus quis, repellat veritatis mollitia ipsa sunt distinctio earum ducimus praesentium. Eaque placeat tenetur cum consectetur sunt reiciendis unde numquam perferendis iste tempora aliquid culpa odio, maiores cumque atque ea id ullam debitis fugiat a eligendi ipsum illum laboriosam quod! Aut labore vitae architecto sapiente error aspernatur laudantium itaque molestias consequuntur? Obcaecati aliquid praesentium corrupti unde eum ea enim laudantium quae laboriosam neque! Ad est facere, deserunt, odio possimus, impedit voluptate nisi odit voluptas aspernatur rerum voluptatibus cumque laudantium consectetur quo debitis amet velit in labore? Ex dolores sint non exercitationem reiciendis possimus commodi fuga ducimus porro eos a fugiat voluptatibus ullam alias veniam numquam magni expedita maxime animi quis aspernatur, minima laudantium sapiente! Nobis cum dolorem numquam et nihil debitis, sequi deleniti perspiciatis nam deserunt, rerum quia officiis iusto autem atque eius commodi. Nulla dignissimos quibusdam deserunt quaerat, beatae illum nesciunt esse voluptatem eius, doloribus corrupti id veniam est distinctio ipsam unde, modi voluptatum exercitationem sunt fugiat minus officia excepturi quod provident? Expedita, itaque temporibus eaque ea voluptatibus error quod dignissimos accusamus? Ad, illo beatae fugit facere, totam voluptatem cumque reiciendis, facilis architecto quas blanditiis libero eum ex dolore rerum aliquid eveniet. Quasi excepturi optio expedita quas eum minus autem nemo laborum nulla asperiores, qui illum animi odit doloremque aspernatur quod deleniti mollitia voluptatem officiis atque ut 
+            corrupti facere. Consectetur deleniti distinctio quisquam minus corporis quo. Blanditiis iusto totam, dolor debitis deleniti incidunt velit illo, ut rem ex, odit quae ea eius cupiditate. Tempore impedit, eligendi nulla in nisi tenetur sequi laboriosam cum enim distinctio similique architecto, deserunt ut aperiam at. Doloribus laboriosam sed ducimus quibusdam quod.</p>
+    </div>
+</body>
+</html>
