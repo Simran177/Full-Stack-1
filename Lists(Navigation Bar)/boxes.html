@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .main{
+            width:600px;
+            height: 400px;
+            background-color:white ;
+             overflow:hidden;  
+            padding:10px;
+            /* position: relative; */
+        }
+        .container{
+            height:100vh;
+            width:100vw;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        body{
+            height: 500vh;
+        }
+        .box{
+            width:100px;
+            height: 100px;
+            position: absolute;
+        }
+        #box1{
+            background-color: green;
+            z-index:3;
+            position:fixed;
+            left:0;
+        }
+        #box2{
+            background-color:orange;
+            top:20px;
+            left:20px;
+            z-index:2;
+        }
+        #box3{
+            background-color:red;
+            top:40px;
+            left:40px;
+            z-index:4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+        </div>
+    </div>
+</body>
+</html>
