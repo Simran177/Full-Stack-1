@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .main{
+            width:600px;
+            height: 400px;
+            background-color:white ;
+             overflow:hidden;  
+            padding:10px;
+            position: relative; /*want image absolute but inside container therefore,set parent postion relative */
+        }
+        .container{
+            height:100vh;
+            width:100vw;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main img{
+            height:200px;
+            width:300px;
+            position: absolute; /*absolute means gets out of container*/
+           bottom:0;
+           right:0;
+        }
+        .main h1{
+          position:absolute;
+          top:0;
+          right:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>This is my heading</h1>
+            <img src="../images/l1BsA24-wallpapers-latest-hd.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolore illum a hic dolores fuga. Dolorum iusto inventore nostrum sequi laudantium, rem vel earum! Magni aliquam illo libero fuga possimus alias dicta voluptas iure. Accusantium aliquam ipsa unde, eligendi soluta nobis eveniet omnis eos nam autem explicabo deserunt qui adipisci a ut quibusdam, accusamus fugit quos eaque beatae. Ad, quisquam. Hic, dolorem. Autem, nam perferendis voluptatem, alias dignissimos praesentium veniam dicta modi iste expedita nulla, quis provident tenetur ducimus deleniti quos voluptatibus commodi cupiditate necessitatibus doloremque illo ullam! Nihil totam fugit animi ducimus dolores dolor illum! Animi velit nostrum temporibus architecto minus voluptate, voluptatum hic quo commodi accusamus explicabo aliquam et, distinctio possimus expedita dolorum excepturi rem ullam eligendi ad, laboriosam provident eius reprehenderit. Vitae possimus laboriosam soluta exercitationem. Placeat ab sunt sed qui aut. Itaque modi facere rerum esse, dolor sequi quaerat ipsum quidem cum iusto blanditiis libero adipisci? Quaerat nemo soluta voluptas hic repellat, ad voluptatum quasi deleniti vel, culpa eum reprehenderit repellendus magnam sunt facilis qui rerum dolores! Deleniti eius hic vitae quibusdam neque deserunt est odio commodi. Sed earum ab veniam facilis, dolorem, perspiciatis 
+                nam culpa, quisquam laboriosam temporibus ut nobis cumque dolore et quos illum.</p>
+        </div>
+    </div>
+</body>
+</html>
