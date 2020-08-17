@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        .header{
+            width:100%;
+            height:70px;
+            background-color: gray;
+            padding:0px 20px;
+        }
+        .header h2{
+            line-height: 70px; /*makes logo to center of header from vertical side*/
+            float: left;
+            text-transform: uppercase;
+            color:white;
+        }
+        .menu li{
+            display: inline-block;
+            line-height: 70px;
+        }
+        .header .menu{
+            list-style: none;
+            float:right;
+        }
+        .menu li a{
+            text-decoration:none;
+            color:white;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding:0px 20px;
+            transition: .4s; /* speed of slider in seconds*/
+        }
+        .menu li a:hover,.show-btn:hover,.hide-btn:hover{
+            color:skyblue;
+        }
+        .show-btn,.hide-btn{
+            padding:30px;
+            color:white;
+            line-height: 70px;
+            transition: .4s;
+            display: none; 
+        }
+        .show-btn{
+            float:right;
+        }
+        #chk{
+            position:absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+        @media(max-width:800px){
+            .show-btn,.hide-btn{
+                display: block;
+            }
+            .menu{
+                position:fixed;
+                top:0;
+                left:-100%;  /*works as a slider effect*/
+                width:100%;
+                height:100vh;
+                background-color: black;
+                text-align: center;
+                padding: 80px 0;
+                transition: .7s;
+                line-height:normal;
+                visibility: hidden;
+            }
+            #chk:checked ~ .menu{
+                left:0;  /*because right=-100% slider effect */
+                visibility:visible;
+            }
+            .menu li{
+                display:block;
+                /* padding:20px 0; */
+            }
+            .menu li a{
+                display: block;
+            }
+            .hide-btn{
+                position: absolute;
+                right:20px;
+                top:10px;
+            }
+        }
+        .content{
+            padding:20px;
+        }
+        .content img{
+            width:100%;
+            max-width:700px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .content p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Beta Labs</h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Abouts</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <label for="chk" class="hide-btn">
+                <i class="fa fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <div class="content">
+        <img src="../images/l1BsA24-wallpapers-latest-hd.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint incidunt et provident eius dolorem eos harum. Labore ab tenetur quisquam. Explicabo, cumque fugiat blanditiis cum facere facilis nam ad quisquam impedit. Esse voluptatem consequatur quo id repellendus error ad saepe nam illo deserunt et dolorum quidem dolor eius delectus fugit, dignissimos, nulla animi quos, officia facilis minima? Maiores, sit quia id voluptates ut rem ratione vel vero quaerat odit saepe tenetur nesciunt harum? Qui ullam obcaecati tenetur consequuntur illum totam accusamus excepturi dolorum. Sunt a vel laborum provident. Vel consectetur, obcaecati impedit vero commodi neque eveniet, ipsam officia consequuntur veniam odit quibusdam iure voluptas rem magni illum debitis quos nobis tempore praesentium blanditiis voluptate error quae enim? Aut, nulla illo voluptas ad adipisci explicabo sit expedita nostrum, dolorum fugiat sunt molestiae veritatis ex sapiente hic voluptatum libero nemo. Beatae cumque corrupti vitae possimus! Eaque officiis exercitationem non veniam ratione iusto officia sunt, mollitia sapiente ea odio nam cum tenetur! Asperiores debitis consequatur veritatis dicta itaque, odio maiores velit accusamus at tenetur iste. Laboriosam eum quibusdam rem tempora porro debitis. Saepe labore repellendus distinctio culpa! Quae asperiores eaque possimus molestias architecto nulla deserunt voluptas autem corrupti eveniet, pariatur commodi accusantium nostrum esse excepturi at exercitationem neque est hic vero deleniti dolores. Autem dicta quidem atque nemo reprehenderit, ipsum repellat dolorum quaerat at voluptatum. Dolorem similique repudiandae et blanditiis dolores cumque corporis ipsam odit ipsa sed animi fugit magnam, dolorum maiores veritatis expedita quasi error id vitae praesentium quibusdam illo officia illum vero! Maxime magnam tempora illo nostrum nemo laudantium ratione optio a deserunt nesciunt corporis ex voluptates reiciendis cupiditate, quam at. Iusto nostrum officia id tempora. Quibusdam repudiandae corrupti cupiditate minima magnam hic ratione sapiente ad illum autem repellendus, ea officiis itaque esse eveniet inventore! Eos deserunt sed nisi atque veniam esse quod quidem nesciunt dicta magni assumenda ad consectetur officiis cumque est beatae mollitia eligendi exercitationem, nostrum qui. Rem aliquam quis atque unde a asperiores culpa suscipit omnis quisquam illo, error non. Quidem tempora quo in nihil ducimus mollitia excepturi dolore aut aspernatur dignissimos? Quaerat voluptatem itaque fuga soluta
+             numquam, tempora in atque ea, possimus dolorum nulla, ex dolores adipisci? Veniam, voluptate cum odit, qui dicta ab laborum, sit sapiente quaerat voluptatibus assumenda. Voluptatem ea blanditiis libero hic voluptas fugiat similique et quam, quisquam fugit, voluptatibus accusamus culpa aspernatur! Excepturi molestias placeat voluptate magnam veritatis neque dicta cum eveniet eos culpa. Dolores eveniet ipsum doloremque, sapiente quasi mollitia enim minus adipisci dolore asperiores itaque quia accusamus voluptatibus placeat? Delectus, quas. Eaque alias, neque quasi consectetur eveniet inventore reprehenderit error harum? Eum vitae obcaecati eaque blanditiis voluptatem provident dolorem ab dignissimos necessitatibus repellat explicabo cupiditate, corporis quas illum fugiat? Odit accusamus aut consectetur doloribus voluptas commodi voluptate, necessitatibus modi possimus obcaecati soluta inventore nostrum sunt id animi quidem, dicta optio quaerat rerum incidunt. Cum aliquid, exercitationem porro eum qui dicta aut omnis molestiae assumenda explicabo, possimus repellendus quam laboriosam id distinctio obcaecati, ipsa sunt modi repellat! Unde nulla voluptates at laboriosam?</p>
+    </div>
+</body>
+</html>
