@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <style>
+        table,td,tr,th{
+            border:1px solid;
+            border-spacing: 10px; /*is irrelevant if we use border-collapse: ;*/
+            border-collapse: collapse;
+            padding:10px;
+        }
+        table{
+            margin:20px auto;
+            text-align:center;
+            background-color: skyblue;
+            width: 80%;
+        }
+        tr:nth-child(even)
+        {
+            background-color: blanchedalmond;
+        }
+        caption{
+            caption-side: bottom;
+            color:blue;
+            margin-top: 10px;
+            font-size:smaller;
+        }
+        th{
+            background-color: lightgray;
+        }
+        .mycol{
+            background-color: aqua !important;
+        }
+        .mycol1{
+            background-color:pink !important;
+        }
+    </style>
+</head>
+<body>
+    <table align="center">
+        <colgroup>
+        <col class="mycol" span="1">
+        <col class="mycol1" span="1">
+        </colgroup>
+        <caption>
+            Lecture Coverage Report
+        </caption>
+        <!-- Columnwise selection -->
+        <tr>
+           <th>SNo.</th>
+           <th>Topic</th>
+           <th>Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Intro to Table</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Semantic Elements intro</td>
+            <td>Pending</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Intro to css</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Intro to Responsive</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Intro to Animation</td>
+            <td>Pending</td>
+        </tr>
+    </table>
+</body>
+</html>
