@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse:collapse;   /*cell-spacing not required now as one border already removed */ 
+            background-color: beige;
+        }
+        th{
+            background-color: grey;
+            color: white;
+        }
+        tfoot tr{
+            background-color:lightgray !important;  /* forcefully applies CSS */
+        }
+        tr:nth-child(even){
+            background-color: white;
+        }
+        tr:nth-child(odd){
+            background-color: darkseagreen;
+        }
+        table,th,tr,td{
+            border:1px solid;
+            padding:10px;
+            text-align: center;
+        }
+        caption{
+            caption-side: bottom;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <table width="800" align="center">
+        
+        <caption>
+            List of courses
+        </caption>
+
+        <colgroup span="2" style="background-color: lightgray;"></colgroup>  <!-- after caption and before semantic element-->
+        <thead>    <!--Semantic tag-->
+        <tr>
+            <th>Course Name</th>
+            <th>Course Duration</th>
+            <th>Course Cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Programming languages</td>
+            <td>2 Months</td>
+            <td>Rs. 5000/-</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Web development
+            <table align="center">
+                <tr>
+                    <td>Front-end</td>
+                    <td>Back-end</td>
+                </tr>
+            </table>
+            </td>
+            <td width="100px">4 Months</td>  <!--all rows of this column i.e. Course durations gets reduced even if we apply this property on one cell only -->
+            <td>Rs. 15000/-</td>
+        </tr>
+        <tr>
+            <!-- <td>Server side programming</td> --> <!--removed to add spanning to merge two rows-->
+            <td>6 Months</td>
+            <td>Rs. 25000/-</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+
+            <td colspan="2">Total Cost</td>  <!-- column span -->
+            <td>Rs. 45000/-</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
