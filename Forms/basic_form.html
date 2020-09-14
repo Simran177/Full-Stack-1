@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="data.html" method="GET">  
+        <!--method post is secure as it doesn't show form data in url ,more secure--> 
+        <!-- name tells server from which form data is to be received -->
+        <!-- novalidate removes all validations from input element evenif required mentioned in input tag-->
+        <!-- entype or encryption type attribute already defined in form tag eg. if we give fisrt name as simran maurya then 
+        in url we will see simran+maurya -->
+        <!-- accept-charset tells the form which characters form is going to accept but since we have already defined charset as UTF-8
+        in metatag therefore no need to specify again in form-->
+    <div>
+        <label for="firstname">First Name</label>   <!-- for is used as when user clicks on label First Name then it takes cursor directly to input field corresponding it since id of input is same as for of label -->
+        <input type="text" id="firstname" name="fname" required placeholder="Enter First Name">  <!-- name attributes helps server to know which text value comes from which input-->
+        <br><br>                                                   <!-- required is used for validation-->
+    </div>
+    <div>
+        <label for="midname">Middle Name Name</label>  
+        <input type="text" id="midname" name="midname" value="kumar" >  <!--value specifies the given data in form by default-->
+        <br><br> 
+    </div>
+    <div>
+        <label for="">Last Name         <!-- another way of using for is to close label after input tag ,this also does the same work as above-->
+        <input type="text" name="lname" readonly>  <!--in readonly no value is allowed to be filled for that attribute of form-->
+        </label>
+        <br><br>
+    </div>
+    <div>
+        <label for="">Password       
+        <input type="password" name="pwd">  
+        </label>
+        <br><br>
+    </div>
+        <input type="submit" name="Submit_btn" value="Click Me">  <!-- behaves as button-->
+        <input type="reset" value="Reset">  <!-- rest all filled values,thus form becomes empty again-->
+    </form>
+</body>
+</html>
