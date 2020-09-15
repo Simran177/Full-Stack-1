@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
+    <style>
+        input[type=text]{
+            background-color: chocolate;
+        }
+        input:read-only{
+            background-color: cadetblue;
+        }
+         /* OR      input:read-only{
+                    background-color: cadetblue;
+        } */
+    </style>
 </head>
 <body>
-    <form action="data.html" method="GET">  
+    <form action="data.html" method="GET" entype="multipart/form-data">  
         <!--method post is secure as it doesn't show form data in url ,more secure--> 
         <!-- name tells server from which form data is to be received -->
         <!-- novalidate removes all validations from input element evenif required mentioned in input tag-->
@@ -33,6 +44,17 @@
     <div>
         <label for="">Password       
         <input type="password" name="pwd">  
+        </label>
+        <br><br>
+    </div>
+    <div>
+        <label for="cv">Attach File     
+        <input type="file" id="cv" name="pwd">  
+        </label>
+        <br><br>
+    </div>
+    <div>    
+        <input type="email" id="email" name="email" placeholder="Enter Emaild">  
         </label>
         <br><br>
     </div>
