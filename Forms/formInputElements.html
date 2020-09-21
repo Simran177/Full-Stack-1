@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input{ 
+            width:400px;
+        }*/
+    </style>
+</head>
+<body>
+    <form action="data.html" method="GET">
+        <label for="text-1">Text Box-1</label>
+        <input type="text" size="10" value="1000" id="text1" name="text-1" readonly disabled><br><br>  <!--size in characters-->
+        <label for="text-2">Text Box-2</label>
+        <input type="text" size="30"
+         value="There is more text to be displayed in this text box."
+        id="text2" name="text-2" hidden><br><br> <!-- by default text box has 20characters limit to be shown at once -->
+<!-- hidden hides textbox from screen but the value inside it will be submitted to server-->  
+
+
+        <label for="text-3">Username</label>
+        <input type="text" name="user"><br><br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pwd" pattern="[A-Z][A-Za-z0-9]*[0-9][a-zA-Z0-9]*" 
+        title="A valid password must contain alphabets and numbers, first character should be capital &must contain a no & no special characters" required><br><br>
+        <input type="checkbox" name="chk" onclick="showpwd()">Show Password<br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="gender" checked value='male'>Male   <!--Note that name attribute should be same for all radio buttons-->
+        <input type="radio" name="gender" id="gender" value='female'>Female
+        <input type="radio" name="gender" id="gender" value='other'>Other
+        <br><br>
+        <!-- For multiple selection, we use checkbox -->
+        <label for="tech">Technologies</label>
+        <input type="checkbox" name="chk1" id="tech" checked value="C lang">C Lang. <!--We dont want checkboxes to run in combination therefore use different values of name attribute-->
+        <input type="checkbox" name="chk2" id="tech" value="java">Java
+        <input type="checkbox" name="chk3" id="tech" value="front-end">Front-end  
+        <br><br>
+        <!-- By default value of checkbox and radio buttons showm as on at execution page, inorder to change it we use value attribute -->
+        <label for="age">Age: </label>
+        <input type="number" name="age" id="age" min="18" max="100" step="2"><br><br> <!--by default step is one-->
+
+        <label for="knowledge">Knowledge Level: </label>
+        <input type="range" name="range" id="knowledge" min="0" max="50"><br><br>
+
+        <label for="dob">D.O.B :</label>
+        <input type="date" name="dob" id="dob"><br><br>
+
+        <label for="dot">D.O.T :</label>
+        <input type="time" name="dot" id="dot"><br><br>
+        
+        <label for="dobt">D.O.B with time:</label>
+        <input type="datetime-local" name="dobt" id="dobt"><br><br>  <!--to combine date and time we use type datetime-local -->
+
+        <label for="month">Current Month: </label>
+        <input type="month" name="month" id="month"><br><br>
+
+        <label for="week">Current Week: </label>
+        <input type="week" name="week" id="week"><br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email"><br><br> <!--We can use pattern attribute here-->
+
+        <label for="file">Upload Your Document:</label>
+        <input type="file" name="file" id="file" accept=".pdf,.doc,.docx,.txt"><br><br>  <!-- audio/*, video/*, .pdf are other restrictions on file; multiple file formats can be uploaded-->
+
+        <label for="search">Search:</label>
+        <input type="search" name="search" id="search"><br><br>
+
+        <label for="website">Website:</label>
+        <input type="url" name="website" id="website"> <br><br> <!--Accepts absolute address-->
+
+        <input type="submit" value="Submit"> <!--sends data to server-->
+         <!-- Creating a button that behaves like normal button but doesn't submit data to server -->
+        <input type="button" value="Click Me" onclick="alert('This is a button event')">  <!--onclick helps button to behave like event handler button ; additional effects-->
+        <br><br>
+        <!-- Graphical button -->
+        <input type="image" src="./Practical/images/logo.png" alt="submit button" name="submitbtn"> <!--clicking on image data will be submitted; after submission two values will be sent to server
+                        x and  y coordinate which is the coordinate of image where we clicked; we could use this to manipulate extra tasks-->
+    </form>
+    <script>
+        function showpwd(){
+            var x= document.getElementById("pass");
+            if(x.type=='password'){
+                x.type='text';
+            }
+            else{
+                x.type= 'password';
+            }
+        }
+    </script>
+</body>
+</html>
