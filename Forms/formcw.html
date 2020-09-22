@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+        width: 500px;}
+    </style>
+</head>
+<body>
+    <form action="data.html" oninput="result.value=parseInt(age.value)+5">  <!-- in output tag-->
+        <fieldset>
+            <legend>Personal Details</legend>  <!--legend used with fieldset-->
+        <label for="name" size="50">Student Name</label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age"><br><br> <!--default type of input field is string although number is mentioned in type of age; therefore we had to typecast age to integer to display result in output tag -->
+    </fieldset>
+    <fieldset>
+        <legend>Technical Details</legend>
+        About Student:
+        <textarea name="about" id="" cols="30" rows="10"></textarea><br><br>
+        <select name="mytech" id="">  <!--dropdown list converted to scroll list on adding size-->
+                                                  
+        <optgroup label="Languages">
+            <!--multiple values can be selected through multiple attribute-->
+            <option value="C lang" selected>C language</option>  <!--value is going to be submitted on the server i.e. C lang-->
+            <option value="java">Java</option>          <!--selected used to select a value by default-->
+            <option value="python">Python</option>
+        </optgroup>
+        <optgroup label="Web Lang">
+            <option value="html">HTML</option>
+            <option value="java script">Javascript</option>
+        </optgroup>
+        </select>
+        <input list="Mylist1" name="Mylist1">
+    <datalist id="Mylist1">   <!--along with given list ,we can crete your own list if not there in original-->
+        <option value="C Lang."></option>
+        <option value="NodeJS"></option>
+        <option value="Java"></option>
+        <option value="Ruby"></option>
+    </datalist>
+</fieldset><br><br>
+
+
+
+        <input type="submit" value="Submit"><br><br>  <!--input is empty tag while button is not-->
+        <button type="submit">    
+            <img src="./Practical/images/tick.png" width="100" height="50" alt="">
+            <a href="http://www.betalabs.com"></a>
+        </button>
+
+        Resulting Age: <output name="result"></output>
+    </form>
+</body>
+</html>
