@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+</head>
+<body>
+    <h1>This is an example of iframe</h1>  
+    <!-- video,audio,multiple links all can ne included in same frame ;
+    iframe is useful if we don't want to disturb the environment of our page like if we move to external websites then we don't want their script to put affect on our page-->
+    <iframe src="../images\l1BsA24-wallpapers-latest-hd.jpg" width="400px" height="300px"></iframe>
+    <iframe src="../Practical/Practical-14.html" frameborder="0" width="400px" height="300px"></iframe>
+    <iframe src="http://www.beta-labs.in" frameborder="5" width="400px" height="300px"></iframe>
+    <br>
+    <!-- sandbox is controlling attribute;outside resorces are stopped from entering frame -->
+    <iframe src="../Practical/Practical-14.html" frameborder="0" width="400px" height="300px" 
+    sandbox></iframe>
+    <iframe src="../Practical/Practical-14.html" frameborder="0" width="400px" height="300px" 
+    sandbox="allow-same-origin allow-forms allow-scripts"></iframe>  <!--inorder to submit form data on server(since server is external resource) we need to allow it using sandbox-->
+    <br><br><br>
+    <a style="display:block;" href="../Practical/Practical-10.html" target="myframe">Link to page1</a> <!--in taget arrtibute write value of name given ot iframe if u want to open a document on your page 
+                                                                                                            through anchor tag-->
+    <a style="display:block;" href="../Practical/Practical-11.html" target="myframe">Link to page2</a>
+    <iframe frameborder="10" name="myframe" width="400px" height="300px"></iframe>
+</body>
+</html>
