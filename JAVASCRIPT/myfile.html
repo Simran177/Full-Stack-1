@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <button id="btn">Click Me</button>
+    <script>
+        var x = document.getElementById("container");
+        console.log(x);
+        x.style.width = "200px";
+        x.style.height = "200px"; 
+        x.style.backgroundColor = "red";   
+        x.innerHTML = "Text added dynamically";
+
+        var y= document.getElementById("btn");
+        // console.log(y);
+        y.onclick = function(){
+        alert("Button is clicked"); 
+
+        x.style.backgroundColor = "blue";
+        x.style.textAlign ="center";
+        x.style.color= "white";
+        };
+    </script>
+    <!-- if we write script code in header section then script doesn't run since container is created after head tag ; we can-->
+    <!-- <script src="myscript.js">  
+    </script>  for external linking of script
+-->
+</body>
+</html>
