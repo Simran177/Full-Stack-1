@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog boxes</title>
+</head>
+<body>
+    <!-- Inline call -->
+    <!-- <button id="btn" onclick="alert('I am a Dialog Box')">Click me</button> -->
+   <!--  Alert Dialog box; single button -->
+    <button id="btn" onclick="hello()">Click me</button>
+    <!--
+    <script>
+        function hello(){
+            var x= 10;
+            var y= 20;
+            alert("This is the sum of two no's ="+ (x+y));
+        }
+    </script>-->
+
+    <!-- Confirm Dialog box , confirm gives choice on boxes-->
+    <!--
+    <script>
+        function hello(){
+            var opt=confirm("Do you want to store your data");
+            if(opt){
+                alert("Your data saved successfully");
+            }
+            else{
+                alert("Yor data not saved");
+            }
+        }
+    </script> --->
+
+        <!-- Prompt Dialog box ; input taken from user-->
+        <!--
+        <script>
+            function hello(){
+            var name= prompt("Enter your name");
+            if(name.length>0 && name!="null")
+              {
+                alert("Welcome "+name);
+              }
+            else{
+                alert("Welcome Anonymous");   
+                }
+            }
+        </script>
+    -->
+        <script>
+           // prompt takes input as string therefore use Number or parseInt
+            function hello(){
+                var x= parseInt(prompt("Enter first no")); 
+                var y= Number(prompt("Enter second no"));
+
+                if(x+y>50)
+                {
+                    alert("Sum is "+ (x+y));
+                }
+                else{
+                    alert("You are bad guy");
+                }
+            }
+        </script>
+</body>
+</html>
