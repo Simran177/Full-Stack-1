@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events Handling</title>
+    <style>
+        #container{
+            width: 300px;
+            height:200px;
+            background-color: navy;
+            margin:0 auto;
+            text-align: center;
+            color: oldlace;
+        }
+        button{
+            display: block;
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    /* Inline Event Binding */
+    <div id="container">  </div>
+    <button onclick="divcolor()">Click Me</button>
+  <script>
+      function divcolor()
+      {
+          var x= document.getElementById('container');
+          x.style.background= "red";
+      }
+  </script>
+-->
+
+<!--
+/* Binding event handler on html element( DOM Level-1) i.e. one event on one handler
+<div id="container">  </div>
+    <button>Click Me</button>
+  <script>
+          var btn= document.querySelector('button');
+          btn.onclick = divcolor; //handler-1
+          btn.onclick = bodycolor;//handler-2
+          //multiple events on onclick event therefore both doesn't work, only one handler works which declared later 
+          
+          function divcolor()   //function hoisting
+      {
+          var x= document.getElementById('container');
+          x.style.background= "red";
+      }
+
+            function bodycolor()
+        {
+            document.body.style.background= "grey";
+        }
+    </script>
+-->
+<!--
+/* Binding event handler on html element( DOM Level-1) i.e. one event on one handler
+<div id="container">  </div>
+    <button>DOM Level-1 Binding</button>
+  <script>
+          var btn= document.querySelector('button');
+          btn.onclick = function(){
+            var x= document.getElementById('container');
+          x.style.background= "red";
+          }    //handler-1
+          btn.onclick = bodycolor;//handler-2
+          //multiple events on onclick event therefore both doesn't work, only one handler works which declared later 
+
+            function bodycolor()
+        {
+            document.body.style.background= "grey";
+        }
+    </script>
+-->
+
+<!--
+/*DOM Level-2 Binding using addEventListener(multiple functions can be applied )
+
+<div id="container"> DOM Level-2 Binding </div>
+<script>
+     var y= document.getElementById('container');
+     y.addEventListener('click',function(){
+         document.getElementById("container").style.background= "red";
+     });
+
+     y.addEventListener("click",abc);
+
+     function abc(){
+         y.style.border ="10px solid yellow";
+     }
+     
+    </script>
+-->
+
+/*DOM Level-2 Binding using addEventListener(multiple functions can be applied )
+
+<div id="container"> DOM Level-2 Binding </div>
+<script>
+     var y= document.getElementById('container');
+     y.addEventListener('click',function(){   //this function can't be removed since function doesn't have its name,its anonymous
+         document.getElementById("container").style.background= "red";
+     });
+
+     y.removeEventListener("click",abc);       //since abc is valid function name therefore, we can remove this function
+     y.addEventListener('click',function(){
+         this.style.borderRadius = "20px";
+     });
+
+   /* y.removeEventListener('click',function(){   //we tried to remove this function but it didn't work out
+         document.getElementById("container").style.background= "red";
+     });*/
+
+     function abc(){
+         y.style.border ="10px solid yellow";
+     }
+     
+    </script>
+
+
+</body>
+</html>
