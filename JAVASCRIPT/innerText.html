@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="blog">
+        This element is <strong>strong</strong> and has                           some super fun
+        <code>code1</code>
+    </div>
+    <!-- <script> 
+        x= document.getElementById("blog");
+
+        console.log(x.innerHTML);
+        console.log(x.innerText);
+        console.log(x.textContent);
+    </script> -->
+
+    <script>
+         x= document.getElementById("blog").innerHTML= "<b><i>Changed</i><b>";
+          //mark the differences among these three by inspecting in console
+        console.log(x.innerHTML);
+        console.log(x.innerText);
+        console.log(x.textContent);
+    </script>
+</body>
+</html>
