@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM access mechanism</title>
+</head>
+<body>
+    <div id="container">
+        This is the First Text
+        <p class="para" id="para1">This is a paragraph</p>
+        This is the Second Text
+        <!-- This is comment that increses no. of nodes on counting child nodes -->
+        <h1>This is a heading</h1>
+        <ul>
+            <li class="newlist">list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+        <p class="para" id="para2">This is another paragraph</p>
+    </div>
+    <script>
+        var x= document.getElementById("para1");
+        console.log(x);
+
+        var y= document.querySelector("h1");  //since h1 didn't have id
+        console.log(y);
+
+        var y= document.querySelector("p");  //it selects first para by default therefore give id name
+        console.log(y);
+
+        var y= document.querySelector("#para2");  //it selects first para by default therefore give id name
+        console.log(y);
+
+        //if there aare multiple elements of same category then use
+
+        var z= document.querySelectorAll(".para");  //creates a list of length 2 since 2 para
+        console.log(z);
+
+         var l= document.querySelectorAll("li");  //creates a list of length 3 since 2 list itms
+        l[2].innerText="list-3";
+
+        var li= document.querySelectorAll("li");  //creates a list of length 3 since 2 list itms
+        li[0].style.color="red";
+
+         var idd= document.querySelectorAll("li");  //creates a list of length 3 since 2 list itms
+        idd[0].setAttribute("id","list1"); 
+        idd[2].classList.add("list-class1");
+        idd[2].classList.add("list-class2");
+        console.log(idd[2].classList)  ; 
+
+        var zz= document.querySelectorAll("li");  
+        console.log('there is a list of li $(zz)');
+
+        var r= document.querySelectorAll("li");  
+        r[0].classList.remove("newlist");
+
+        var t= document.getElementsByTagName("li");  
+        console.log(t);
+
+        var t1= document.getElementsByTagName(".para");  
+        console.log(t1);
+
+        var s= document.getElementById("container");
+        console.log(s.childNodes);
+
+        var s= document.getElementById("container");
+        s.childNodes[2].textContent ="Changed";
+
+        var s= document.getElementById("container");
+        console.log(s.childNodes[2].parentNode);
+    </script>
+</body>
+</html>
