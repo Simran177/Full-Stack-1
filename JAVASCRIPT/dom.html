@@ -10,7 +10,7 @@
         This is the First Text
         <p class="para" id="para1">This is a paragraph</p>
         This is the Second Text
-        <!-- This is comment that increses no. of nodes on counting child nodes -->
+        <!-- This is comment that increases no. of nodes on counting child nodes -->
         <h1>This is a heading</h1>
         <ul>
             <li class="newlist">list</li>
@@ -29,10 +29,10 @@
         var y= document.querySelector("p");  //it selects first para by default therefore give id name
         console.log(y);
 
-        var y= document.querySelector("#para2");  //it selects first para by default therefore give id name
+        var y= document.querySelector("#para2");  
         console.log(y);
 
-        //if there aare multiple elements of same category then use
+        //if there are multiple elements of same category then use
 
         var z= document.querySelectorAll(".para");  //creates a list of length 2 since 2 para
         console.log(z);
@@ -68,7 +68,7 @@
         s.childNodes[2].textContent ="Changed";
 
         var s= document.getElementById("container");
-        console.log(s.childNodes[2].parentNode);
+        console.log(s.childNodes[2].parentNode);  
     </script>
 </body>
 </html>
