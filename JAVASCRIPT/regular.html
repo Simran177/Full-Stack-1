@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+</head>
+<body>
+    <p>Welcome to Javascript</p>
+    <button onclick="myFunction()">Click ME</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            var str="Welcome to Beta-Labs to learn JavaScript \n This is an online tutorial 135001";
+         //   var patt= /to/g;  //g denotes to identify multiple occurences of pattern
+         //   var patt= /beta/;  
+        //above function doesn't return anything as it is case-sensitive
+        // var patt= /beta/i;  //i for case-insensitive
+        // var patt= /to/gm ;  //m denotes multi-line mathing
+        //    var patt= /to/g;
+
+       // var patt= /[e]/g; //all e characters
+       // var patt= /[^e]/g;  //all characters other than e
+        //   var patt= /[a-e]/g;  //find all characters from a to e
+        //   var patt= /[^a-e]/g;
+        //   var patt= /[0-3]/g;
+        //   var patt= /[^0-3]/g;
+        // var patt= /\w\D/g ;   //D for no-digit, w means character
+        // var patt= /\W\D/g ;         //includes spaces
+        // var patt= /\W\D\S/g ;   //finds non-whitespace
+
+        // var patt= /a+/g;  //atleast one occurence of a
+         var patt= /a?/g;      //matches string with zero or one occurence
+        
+             var res= str.match(patt);
+            // var res= patt.global;  //tells whether pattern me g quantifier use hua h ya nhi
+            document.getElementById("demo").innerHTML = res;
+        }
+    </script>
+</body>
+</html>
