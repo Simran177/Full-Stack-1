@@ -12,42 +12,96 @@
     <div class="container">
         <form id="form1">
             <h3>CREATE ACCOUNT</h3>
-            <input type="text" placeholder="Enter Email">
-            <input type="text" placeholder="Enter Password">
-            <input type="text" placeholder="Confirm Password">
+            <div class="form-control">
+                <label for="email">Email Id</label>
+                <input type="text" id="email" placeholder="Enter Email id">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label for="pass1">Password</label>
+                <input type="password" id="pass1" placeholder="Enter Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+
+            <div class="form-control">
+                <label for="pass2">Re-Enter Password</label>
+                <input type="password" id="pass2" placeholder="Enter Password Again">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
             <div class="btn-box">
-                <button type="button" id="next1">Next</button>
+                <button type="submit" id="next1">Next</button>
             </div>
         </form>
-
-        <form id="form2">
-            <h3>SOCILA LINKS</h3>
-            <input type="text" placeholder="Linkedin">
-            <input type="text" placeholder="GitHUB">
-            <input type="text" placeholder="Facebook">
+        
+         <form id="form2">
+            <h3>SOCIAL LINKS</h3>
+            <div class="form-control">
+                <label for="linkedin">Linkedin Id</label>
+                <input type="text" id="linkedin" placeholder="Enter your Linkedin Id">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label for="git">GitHub</label>
+                <input type="text" id="git" placeholder="Enter your GitHub Id">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label for="fb">Facebook Id</label>
+                <input type="text" id="fb" placeholder="Enter your Facebook Id">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
             <div class="btn-box">
                 <button type="button" id="back1">Back</button>
-                <button type="button" id="next2">Next</button>
-
+                <button type="submit" id="next2">Next</button>
             </div>
         </form>
 
         <form id="form3">
             <h3>PERSONAL INFORMATION</h3>
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="Mobile No.">
+            <div class="form-control">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" placeholder="Enter your first name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" placeholder="Enter your last name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label for="cellno">Mobile no</label>
+                <input type="text" id="linkedin" placeholder="Enter your contact no.">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </div>
             <div class="btn-box">
                 <button type="button" id="back2">Back</button>
-                <button type="button">Submit</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
 
         <div class="step-row">
             <div id="progress"></div>
-            <div class="step column"><small>Step-1</small></div>
-            <div class="step column"><small>Step-2</small></div>
-            <div class="step column"><small>Step-3</small></div>
+            <div class="step-col"><small>Step-1</small></div>
+            <div class="step-col"><small>Step-2</small></div>
+            <div class="step-col"><small>Step-3</small></div>
         </div>
     </div>
     <script src="main.js"></script> 
