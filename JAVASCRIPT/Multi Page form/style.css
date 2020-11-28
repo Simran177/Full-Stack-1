@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">');
 *{
     padding: 0;
     margin: 0;
@@ -6,26 +7,31 @@
 body{
     background-color: darkgray;
     height: 100vh;
-    font-family: "Open Sans,sans-serif";
+    font-family: "Open Sans",sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .container{
-    width:360px;
-    height: 400px;
+    width:440px;
+    height: 550px;
     position: relative;
     border-radius: 10px;
     background-color: white;
      overflow: hidden;     /* baki 2 forms bahar ke invisible jo jynge*/
 }
-
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
 .container form{
     position:absolute;
     top:80px;
     left:40px;  /*form initial position*/
-    width:280px;
+    width:360px;
     transition: .5s;
+    padding: 20px 30px;
 }
 
 form h3{
@@ -33,21 +39,13 @@ form h3{
     margin-bottom: 30px;
     color: #777;
 }
-form input{
-    width:100%;
-    padding: 10px 5px;
-    margin:50px 0px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #777;
-    background: transparent;
-}
+
 .btn-box{
     margin:30px auto;
     text-align: center;
 }
  form button{
-     width:120ox;
+     width:120px;
      height:35px;
      background-color:  crimson;
      border: none;
@@ -60,11 +58,11 @@ form input{
      left:450px;
  }
  #form3{
-     left:-450px;
+     left:450px;
  }
 
  .step-row{
-     width: 360px;
+     width: 440px;
      height: 40px;
      box-shadow: 0px -1px 5px -1px #000;
      display: flex;
@@ -73,14 +71,14 @@ form input{
  }
 
  .step-col{
-     width:120px;
+     width:145px;
      text-align: center;
      color:black;
-     font-weight: 700;
+     font-weight: bold;
      z-index: 1;
  }
  #progress{
-     width:120px;
+     width:146px;
      height:100%;
      position: absolute;
      background-color: crimson;
@@ -100,3 +98,52 @@ form input{
  ::placeholder{
      font-size: 16px;
  }
+ 
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    display: block;
+    width:100%;
+    padding:10px;
+    border-radius: 5px;
+    outline: none;
+    border:2px solid #f0f0f0;
+}
+.form-control i{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    visibility: hidden;
+}
+.form-control small{
+    position: absolute;
+    left:0;
+    margin-top: 5px;
+    visibility: hidden;
+}
+.form-control.success input{
+    border-color: rgb(48,207,48);
+}
+.form-control.error input{
+    border-color: red;
+}
+
+.form-control.success .fa-check-circle{
+    visibility: visible;
+    color: rgb(48,207,48);
+}
+.form-control.error .fa-exclamation-circle{
+    color: red;
+    visibility: visible;
+}
+.form-control.error small{
+    color: red;
+    visibility: visible;
+}
