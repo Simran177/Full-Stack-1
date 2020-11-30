@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Tables</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bootstrap Table styles</h1>
+        <table class="table table-bordered table-striped table-hover table-sm">  <!--by default add padding and border ; use table-borderless for outer border only
+          table-sm reduces padding space,  also no need to add responsiveness as it is already-->
+            <thead class="table-dark">  <!--to make only headers dark we used this class here, if applied above then whole table turns dark-->
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-info">
+                    <th>John</th>
+                    <th>Doe</th>
+                    <td>john@example.com</td>
+                </tr>
+                <tr class="table-danger">
+                    <th>Mary</th>
+                    <th>Doe</th>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr class="table-primary">
+                    <th>July</th>
+                    <th>Dooley</th>
+                    <td>july@example.com</td>
+                </tr>
+                <tr class="table-success">
+                    <th>John</th>
+                    <th>Doe</th>
+                    <td>john@example.com</td>
+                </tr>
+                <tr class="table-warning">
+                    <th>Mary</th>
+                    <th>Doe</th>
+                    <td>mary@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
