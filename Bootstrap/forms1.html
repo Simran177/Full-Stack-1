@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap forms</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<style>
+    .margins{
+        margin-bottom: 200px;
+    }
+    label{
+        color:green;
+    }
+</style>
+<body>
+    <div class="container mt-3">
+        <form>
+              <!-- form-group: label, input, text i.e. groups elemnet of one category -->
+              <!-- form-control gives good look to input box of form like border , box's width incresed -->
+            <div class="form-group">
+              <label for="exampleInputuser">Username</label>
+              <input type="text" class="form-control" id="exampleInputuser" aria-describedby="emailHelp">
+              <small id="userName" class="form-text text-muted">Create a unique username for this application.</small>
+            <!-- text-muted gives grey color to text -->
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+<br><br>
+          <form class="form-inline">
+            <div class="form-group mr-3">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group mr-3">
+              <label for="exampleFormControlSelect1">Example select</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group mr-3">
+              <label for="exampleFormControlSelect2">Example multiple select</label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group mr-3">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </form>
+          <!-- form-inline makes all elements of form in one line -->
+          <!-- .form-control-plaintext used to remove border around input box -->
+    </div>
+
+
+    <br><br>
+
+    <form>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+      </form>
+
+<br><br>
+      <form>
+        <div class="form-row">
+          <div class="col-7">
+            <input type="text" class="form-control" placeholder="City">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="State">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Zip">
+          </div>
+        </div>
+      </form>
+      <div class="margins"></div>
+
+</body>
+</html>
