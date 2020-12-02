@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Method-1  Download the source library -->
+    <script src="js.js"></script>
+    <!-- Method-2  Using CDN File -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+
+<script>
+    //Jquery allows advantage of putting script code in head section,using javascript we weren't able to produce output on writing script in head section as h1 not declared before it
+    /* $(document).ready(function(){       //the code will only work when entire document is ready
+            var a=$('h1').html();
+            alert(a);
+        }); */
+</script>
+
+</head>
+<body>
+    <h1>This is session on JQuery</h1>
+    <script>
+        // var a= document.getElementsByTagName('h1');
+        // alert(a[0]);
+                // OR
+        // Javascript code
+       // var a= document.querySelector('h1').innerHTML;
+        //alert(a);
+
+        //Jquery Code
+
+        //First line of below code is not necessary here, its main work is when we want to run script in head section
+      //$(document).ready(function(){
+            var a=$('h1').html();
+            alert(a);
+    
+    </script>
+</body>
+</html>
