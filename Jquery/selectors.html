@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery Selector</h1>
+        <hr>
+        <h2 id="head1">Heading-1</h2>
+        <p id="para1" class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit.<span> Rem, nihil</span>! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae iste maiores quibusdam asperiores aspernatur? Explicabo voluptate vel dolorum similique?</p>
+        <h2 class="elem2">Heading-2</h2>
+        <p class="elem2" class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, nihil! Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Sit fugit alias laborum velit similique natus accusamus amet consectetur error sapiente?</p>
+        <span>dolor sit amet</span>
+
+        <ul>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+        </ul>
+
+        <input type="button" class="btn btn-primary" value="Button">
+        <input type="submit" class="btn btn-warning" value="Submit">
+         <input type="text" class="form-control mt-2 w-50"> <!-- d-inline "  -->
+
+         <a href="https://twitter.com">Twitter</a>
+         <a href="https://facebook.com">Facebook</a>
+    </div>
+    <div class="mb-5"></div>
+    <script>
+        $(document).ready(function(){
+
+           // $('#head1').hide();  //adds a class display:none therefore heading1 hides
+          //  $('#para1').hide();
+         // $('h2.elem2').hide();  //remove heading2
+        // $('p.elem2').hide();  //removing 2nd para
+
+            // $('h2,p').hide();  //remove all h2 and all para
+            //To apply one css property
+            // $('p span').css('color','red'); //target child element; css is method to change css
+            //Applying more than one css
+          //  $('p span').css({'color':'red','font-size':'24px'});
+          $('span').css({'color':'red','font-size':'24px'});
+        });
+
+      //  $('ul li:first').css('color','blue');
+        //$('ul li:last').css('color','brown');
+
+        $('li:even').css('background-color','yellow');  //first,third,fifth are yellow as it behaves as an array therefore index0 =first list is even
+        $('li:odd').css('background-color','grey');
+
+        $('li:nth-child(3n)').css('list-style','none');  //3*0=0, 3*1=3
+    
+        //Target form elements
+
+        $(':button').hide();
+        $('input[type=text]').hide();   //agar input box me class diplay inline lgee to fir hide nhi hoga
+   
+        // Target based on attribute
+        //$('a[href]').css('color','red');  //to change color of both links, 
+        //Target based on value
+        $('a[href="https://twitter.com"]').css('color','red'); //to change color of twitter link
+   
+   
+   
+    </script>
+</body>
+</html>
