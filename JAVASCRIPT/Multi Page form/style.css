@@ -5,145 +5,95 @@
     box-sizing: border-box;
 }
 body{
-    background-color: darkgray;
+    font-family: 'Quicksand', sans-serif;
+    background-color: darkgrey;
     height: 100vh;
-    font-family: "Open Sans",sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .container{
-    width:440px;
-    height: 550px;
-    position: relative;
+    width: 360px;
+    height: 400px;
+    background-color: #fff;
     border-radius: 10px;
-    background-color: white;
-     overflow: hidden;     /* baki 2 forms bahar ke invisible jo jynge*/
-}
-.form-control{
-    margin-bottom: 10px;
-    padding-bottom: 20px;
     position: relative;
+    /*to hide everything outside the div container*/
+    /*this will help in hiding the shadow on top and the extra progress bar*/
+    overflow: hidden;
+    
 }
 .container form{
-    position:absolute;
-    top:80px;
-    left:40px;  /*form initial position*/
-    width:360px;
-    transition: .5s;
-    padding: 20px 30px;
+    width: 280px;
+    position: absolute;
+    /*Position of form in container*/
+    left: 40px;
+    top: 80px;
+    transition: 0.5s;
 }
-
 form h3{
     text-align: center;
     margin-bottom: 30px;
     color: #777;
 }
-
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    background-color: transparent;
+}
 .btn-box{
-    margin:30px auto;
+    margin: 30px auto;
     text-align: center;
 }
- form button{
-     width:120px;
-     height:35px;
-     background-color:  crimson;
-     border: none;
-     border-radius: 10px;
-     color:white;
-     outline: none;
- }
+form button{
+    width: 120px;
+    height: 35px;
+    background-color: crimson;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
 
- #form2{
-     left:450px;
- }
- #form3{
-     left:450px;
- }
-
- .step-row{
-     width: 440px;
-     height: 40px;
-     box-shadow: 0px -1px 5px -1px #000;
-     display: flex;
-     align-items: center;
-     position: relative;
- }
-
- .step-col{
-     width:145px;
-     text-align: center;
-     color:black;
-     font-weight: bold;
-     z-index: 1;
- }
- #progress{
-     width:146px;
-     height:100%;
-     position: absolute;
-     background-color: crimson;
-     transition: 1s;
- }
- #progress::after{
+}
+#form2{
+    left: 450px;
+}
+#form3{
+    left: 450px;
+}
+.step-row{
+    width: 360px;
+    height: 40px;
+    box-shadow: 0px -1px 5px -1px #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.step-col{
+    width: 120px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+#progress{
+    width: 120px;
+    height: 100%;
+    position: absolute;
+    background-color: crimson;
+    transition: 1s;
+}
+#progress::after{
     content: '';
     width: 0px;
     height: 0px;
     position: absolute;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    right:-20px;
-    top:0px;
+    right: -20px;
     border-left: 20px solid crimson;
- }
- ::placeholder{
-     font-size: 16px;
- }
- 
-.form-control{
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
-}
-.form-control label{
-    display: block;
-    margin-bottom: 5px;
-}
-.form-control input{
-    display: block;
-    width:100%;
-    padding:10px;
-    border-radius: 5px;
-    outline: none;
-    border:2px solid #f0f0f0;
-}
-.form-control i{
-    position: absolute;
-    right: 10px;
-    top: 40px;
-    visibility: hidden;
-}
-.form-control small{
-    position: absolute;
-    left:0;
-    margin-top: 5px;
-    visibility: hidden;
-}
-.form-control.success input{
-    border-color: rgb(48,207,48);
-}
-.form-control.error input{
-    border-color: red;
-}
-
-.form-control.success .fa-check-circle{
-    visibility: visible;
-    color: rgb(48,207,48);
-}
-.form-control.error .fa-exclamation-circle{
-    color: red;
-    visibility: visible;
-}
-.form-control.error small{
-    color: red;
-    visibility: visible;
+    
 }
