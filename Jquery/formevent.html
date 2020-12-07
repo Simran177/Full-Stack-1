@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY EVENTS</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery Form Events</h1>
+        <hr>
+        <form id="myform">
+            <div class="form-group">
+                <label for="user">Username</label>
+                <input type="text" id="user" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <select id="age" class="form-control">
+                    <option value="">Select age</option>
+                    <option value="age>40">age>40</option>
+                    <option value="age>18">age>18</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary mt-3">
+
+            <button class="copy btn btn-secondary mt-3">Copy to clipboard</button>
+        </form>
+        <div class="content border border-primary mt-3 p-3"></div>
+
+    </div>
+
+        
+    <script>
+        $(document).ready(function()
+        {
+            $('#user,#password,#age').focus(function(){
+                $(this).css('background-color','pink')
+            });
+            $('#user,#password,#age').blur(function(){  //ek input pr click krke dusre pr click kre to phle wale ka css disapper ho jyga
+                $(this).css('background-color','')
+            });
+            $('#age').change(function(){
+                var a= $(this).val();
+                //show value of ahe in content box
+                $('.content').html("Your Age:"+a).show().fadeOut(3000);  //content in box disappers ahter 3s 
+            });
+            //Select event
+            $('.copy').click(function(){
+                $('#user').select();   
+                document.execCommand('copy');  //username ke andar ka data clipboard me jyga
+                alert("Data copied:" +$('#user').val());
+               // $('.content').text($('#user').val().show(5000));
+            });
+            //Submit event
+            $('#myform').submit(function(){
+                alert("Data Submitted Successfully");
+            });
+        });
+    </script>
+</body>
+</html>
