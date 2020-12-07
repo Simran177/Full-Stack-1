@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY EVENTS</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery Events</h1>
+        <hr>
+        <h1 class="text-center">1. Mouse events</h1>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quam ut dolores, ea, esse, suscipit inventore facere natus provident adipisci officia sint earum. Atque, enim natus corrupti aut reprehenderit nemo accusantium inventore non possimus aspernatur quas nobis, at praesentium quae?</p>
+        </div>
+        <hr>
+        <h1 class="text-center">2. Keyboard events</h1>
+        <ul class="list-unstyled p-3 text-center border border-muted">
+            <li>Keypress- All Textual Keys considered here</li>
+            <li>Keyup- All Keys</li>
+            <li>Keydown- Applied on functional keys onlu</li>
+        </ul>
+    </div>
+    <script>
+        // MOUSE EVENTS
+        $(document).ready(function(){
+            $('.box').click(function(){
+                $('.box').css('background-color','lightpink');
+            });
+            $('.box').dblclick(function(){
+                $('.box').css('background-color','skyblue');
+            });
+            $('.box').contextmenu(function(){   //right click on mouse changes background color
+                $('.box').css({'background-color':'orange','color':'red'});
+            });
+            $('.box').mouseenter(function(){   //right click on mouse changes background color
+                $('.box').css({'background-color':'lightgrey','color':'white'});
+            });
+            $('.box').mouseleave(function(){   //right click on mouse changes background color
+                $('.box').css({'background-color':'lightgreen','color':'blue'});
+            });
+
+            //Keyboard Events
+            $('body').keypress(function(){
+                $(this).css('background-color','#40E0D0')
+            });
+            $('body').keyup(function(){
+                $(this).css('background-color','#FF69B4')
+            });
+            $('body').keydown(function(){
+                $(this).css('background-color','#ADFF2F')
+            });
+        });
+    </script>
+</body>
+</html>
