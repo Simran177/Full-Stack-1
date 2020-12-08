@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters/Setters</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery class methods</h1>
+        <hr>
+        <h2 class="text-center">Insert | Remove</h2>
+        <hr>
+        <ul>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+            <li>List Items</li>
+        </ul>
+        </div>
+<script>
+    $(document).ready(function(){
+        $('ul').append('<li>New List Element</li>');
+        $('ul').prepend('<li>New List Element</li>');
+        $('ul').after('<p>This is para</p>');  //p comes after ul
+        $('ul').before('<p>This is para</p>');
+        $('p:last').remove();  //remove para below ul
+        $('ul').empty();  //list items removed but ul still exists
+        // $('ul').remove();   ul also removed
+   });
+</script>
+      
+</body>
+</html>
