@@ -35,21 +35,21 @@
             $('.box').contextmenu(function(){   //right click on mouse changes background color
                 $('.box').css({'background-color':'orange','color':'red'});
             });
-            $('.box').mouseenter(function(){   //right click on mouse changes background color
+            $('.box').mouseenter(function(){   
                 $('.box').css({'background-color':'lightgrey','color':'white'});
             });
-            $('.box').mouseleave(function(){   //right click on mouse changes background color
+            $('.box').mouseleave(function(){   
                 $('.box').css({'background-color':'lightgreen','color':'blue'});
             });
 
             //Keyboard Events
-            $('body').keypress(function(){
+            $('body').keypress(function(){    //textual key
                 $(this).css('background-color','#40E0D0')
             });
             $('body').keyup(function(){
                 $(this).css('background-color','#FF69B4')
             });
-            $('body').keydown(function(){
+            $('body').keydown(function(){      //action performed on functional keys
                 $(this).css('background-color','#ADFF2F')
             });
         });
