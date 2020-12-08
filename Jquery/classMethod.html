@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters/Setters</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery class methods</h1>
+        <hr>
+        <h2 class="text-center">Add class | Remove class | Toggle class</h2>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <h3 class="text-left">Text Heading</h3>
+            <p class="text-justify">Lorem ipsum dolor sit amet, <span class="text-danger">consectetur adipisicing</span> consectetur adipisicing elit. Sequi quasi enim inventore error nobis est non modi! Nemo corporis nulla cum corrupti officia rem ullam debitis beatae iure eaque nam maiores voluptate a, deleniti fuga facere in! Fugit repellat voluptatum hic fuga debitis voluptate, nesciunt praesentium vitae, qui facere ipsam!</p>
+            <button class="add btn btn-primary mt-3">Add class</button>
+            <button class="remove btn btn-danger mt-3">Remove class</button>
+            <button class="toggle btn btn-success mt-3">Toggle class</button>
+
+        </div>
+        <hr>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                $('.add').click(function()
+                {
+                    $('.box').addClass('bg-warning');
+                });
+                $('.remove').click(function()
+                {
+                    $('.box').removeClass('bg-warning');
+                });
+                $('.toggle').click(function()
+                {
+                    $('.box').toggleClass('bg-warning text-light');  //adds background on single click and removes it on next click
+      
+                });
+                
+            });
+        </script>
+</body>
+</html>

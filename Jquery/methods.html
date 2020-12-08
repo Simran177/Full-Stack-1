@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters/Setters</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center">JQuery Methods</h1>
+        <hr>
+        <h2 class="text-center">Getters|Setters</h2>
+        <div class="box text-center p-3 mt-3 border border-dark">
+            <h3 class="text-left">Text Heading</h3>
+            <p class="text-justify">Lorem ipsum dolor sit amet, <span class="text-danger">consectetur adipisicing</span> consectetur adipisicing elit. Sequi quasi enim inventore error nobis est non modi! Nemo corporis nulla cum corrupti officia rem ullam debitis beatae iure eaque nam maiores voluptate a, deleniti fuga facere in! Fugit repellat voluptatum hic fuga debitis voluptate, nesciunt praesentium vitae, qui facere ipsam!</p>
+            <button class="setter btn btn-danger mt-3">Setter</button>
+        </div>
+        <hr>
+        <form id="myform">
+            <div class="form-group">
+                <label for="user">Username</label>
+                <input type="text" id="user" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary mt-3">
+            </form>
+            </div>
+
+            <script>
+                $(document).ready(function(){
+                    var a= $('body').text();  //entire text
+                    console.log(a);
+                });
+
+                $(document).ready(function(){
+                    var a= $('.box').html();  //entire text including html elements
+                    console.log(a);
+                });
+
+                $(document).ready(function(){
+                    var a= $('.box').attr('class');  //to see what classes are used in box element
+                    console.log(a);
+                });
+
+                $(document).ready(function(){
+                    var a= $('#myform div label').attr('for');
+                    console.log(a);
+                });
+
+                //Value method
+                //getter method
+               $('#myform').submit(function()
+               {
+                var a= $('#user').val();
+                var b= $('#password').val();
+                alert("Your credentials are: "+ '\nUsername: '+a+'\nPassword:'+b);
+               });
+
+               //setter method
+               //arguments must be passed in setters
+
+               $('.setter').click(function()
+               {
+                $('.box h3').text('Heading changed');  //change the value of h3 heading
+                $('.box p').html('paragraph changed <br><a class="btn btn-info mt-2" href="">link</a>');   //since we are adding an html element anchor tag here therefore used html function
+                $('.box a').attr('href','https://google.com');  //setting href of anchor tag
+                }); 
+               //setting values of foem elements  
+                $('#user').val('Simran');
+                $('#password').val('123');
+              
+
+            </script>
+
+        </body>
+        </html>
