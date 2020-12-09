@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <style>
+        #box2{
+            width:100px; 
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-3">
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <hr/>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadein">Fade In</button>
+    <button id="fadetoggle">Fade Toggle</button>
+    <hr/>
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="slidetoggle">Slide Toggle</button>
+    <button class="btn btn-danger" id="stop">Stop</button>
+
+    <div class="bg-dark mt-3 mb-3" id="box">
+        <h2 class="p-2 text-light">Hello World</h2>
+    </div>
+    <hr/>
+    <button id="movel">Move Left</button>
+    <button id="mover">Move Right</button>
+    <button id="movea">Move Around</button>
+
+    <div id="box2" class=" bg-danger position-relative mt-3"></div>
+<!-- to move the box position relative important, apne position ke according move krega -->
+</div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#hide').click(function(){
+            $('#box').hide();        //making display none
+        });
+        $('#show').click(function(){
+            $('#box').show();
+        });
+        $('#toggle').click(function(){
+            $('#box').toggle();
+        });
+
+        $('#fadeout').click(function(){
+            $('#box').fadeOut(1000,function(){
+                $('#fadeout').text("Its gone");
+            });
+        });
+
+        $('#fadein').click(function(){
+            $('#box').fadeIn(1000);
+        });
+
+        $('#fadetoggle').click(function(){
+            $('#box').fadeToggle(1000);
+        });
+
+        $('#slideup').click(function(){
+            $('#box').slideUp(1000);
+        });
+        $('#slidedown').click(function(){
+            $('#box').slideDown(1000);
+        });
+        $('#slidetoggle').click(function(){
+            $('#box').slideToggle(1000);
+        });
+
+        $('#stop').click(function(){
+            $('#box').stop(1000);  //stops the animation
+        });
+
+
+        $('#mover').click(function(){
+            //Animation is combination of multiple effects
+            $('#box2').animate({
+                left :500,
+                height: "300px",
+                width: "300px",
+                opacity :0.5
+            });
+        });
+        $('#movel').click(function(){
+            //Animation is combination of multiple effects
+            $('#box2').animate({
+                left : 0,
+                height: "100px",
+                width: "100px",
+                opacity :1
+            });
+        });
+
+        $('#movea').click(function(){
+            //Animation is combination of multiple effects
+            var box= $('#box2');
+            box.animate({
+                left :300
+            });
+            box.animate({
+                top :300
+            });
+            box.animate({
+                left :0,
+                top:300
+            });
+            box.animate({
+                top:0
+            });
+        });
+       
+    });
+</script>
+</html>
